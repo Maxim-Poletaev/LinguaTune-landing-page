@@ -1,0 +1,292 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0A0A0F;
+            color: #ffffff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* контейнер */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* кнопки и формы */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #E864D8;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(232, 100, 216, 0.3);
+        }
+
+        .btn:hover {
+            background: #d44ac4;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(232, 100, 216, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #E864D8;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: rgba(232, 100, 216, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* форма */
+        .email-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        
+        .email-form input {
+            flex: 1;
+            height: 52px;
+            padding: 14px 20px;
+            border-radius: 60px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: #1A1A24;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .email-form input:focus {
+            border-color: #E864D8;
+            background: #22222e;
+        }
+
+        .email-form input::placeholder {
+            color: #888;
+        }
+
+        /* секции */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            background: linear-gradient(135deg, #FFFFFF, #E864D8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #B0B0C0;
+            margin-top: -32px;
+            margin-bottom: 48px;
+            font-size: 1.2rem;
+        }
+
+        /* карточки */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #12121A;
+            border-radius: 32px;
+            padding: 32px 24px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(232,100,216,0.2);
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            border-color: #E864D8;
+            transform: translateY(-6px);
+        }
+
+        .card i {
+            font-size: 2.8rem;
+            color: #E864D8;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #B0B0C0;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at 20% 30%, #1B0F1F, #0A0A0F 80%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(232,100,216,0.15);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(232,100,216,0.4);
+        }
+
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #E864D8, #9B59B6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #C0C0D0;
+            margin-bottom: 36px;
+        }
+
+        /* секция бесплатной песни */
+        .song-card {
+            background: linear-gradient(135deg, #191926, #0E0E16);
+            border-radius: 48px;
+            padding: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(232,100,216,0.3);
+            margin-top: 24px;
+        }
+
+        .song-cover {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(145deg, #E864D8, #7C3AFF);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 30px -10px rgba(232,100,216,0.3);
+        }
+
+        .song-cover i {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .song-info {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .song-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .song-info p {
+            color: #aaa;
+        }
+
+        .level {
+            background: #2A2A36;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            margin-top: 12px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #12121A;
+            border-radius: 20px;
+            padding: 20px 28px;
+            margin-bottom: 16px;
+            border-left: 4px solid #E864D8;
+        }
+
+        .faq-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: #B0B0C0;
+        }
+
+        /* footer */
+        footer {
+            text-align: center;
+            padding: 48px 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #6F6F8A;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .email-form {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
