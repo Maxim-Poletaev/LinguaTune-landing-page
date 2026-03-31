@@ -1,3 +1,11 @@
+// Аккордеон для FAQ
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+
 // Обработка двух форм
     function handleFormSubmit(event, emailValue) {
         event.preventDefault();

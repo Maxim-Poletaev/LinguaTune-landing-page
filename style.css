@@ -248,22 +248,88 @@
         }
 
         /* FAQ */
-        .faq-item {
-            background: #12121A;
-            border-radius: 20px;
-            padding: 20px 28px;
-            margin-bottom: 16px;
-            border-left: 4px solid #E864D8;
-        }
+        /* ========== ИНТЕРАКТИВНЫЙ FAQ (АККОРДЕОН) — ИСПРАВЛЕННАЯ АНИМАЦИЯ ========== */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .faq-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
+.faq-item {
+    background: #12121A;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(232,100,216,0.2);
+}
 
-        .faq-item p {
-            color: #B0B0C0;
-        }
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.faq-question:hover {
+    background: rgba(232,100,216,0.08);
+}
+
+.faq-question span:first-child {
+    flex: 1;
+    padding-right: 16px;
+}
+
+.faq-icon {
+    font-size: 1.3rem;
+    color: #E864D8;
+    transition: transform 0.3s ease;
+    min-width: 24px;
+    text-align: center;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.faq-answer-inner {
+    overflow: hidden;
+    padding: 0 28px;
+    color: #B0B0C0;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.faq-item.active .faq-answer-inner {
+    padding: 0 28px 24px 28px;
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+    .faq-item.active .faq-answer-inner {
+        padding: 0 20px 20px 20px;
+    }
+}
 
         /* footer */
         footer {
